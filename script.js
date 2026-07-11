@@ -326,32 +326,31 @@ function shareCustomer(index){
     let c = customers[index];
 
     let message =
-`🧾 பரணி புடவை கணக்கு மேலாளர்
+`🧾 Bharani Saree Account Manager
 
-👤 வாடிக்கையாளர் : ${c.name}
-📞 தொலைபேசி : ${c.phone}
+👤 Customer : ${c.name}
+📞 Phone : ${c.phone}
 
-💰 பழைய பாக்கி : ₹${c.balance}
-🛍 வாங்கிய தொகை : ₹${c.purchase}
+💰 Balance : ₹${c.balance}
+🛍 Purchase : ₹${c.purchase}
 
-💵 கையில் செலுத்தியது : ₹${c.paymentHand}
-📱 GPay மூலம் செலுத்தியது : ₹${c.paymentGpay}
+💵 Hand Payment : ₹${c.paymentHand}
+📱 GPay Payment : ₹${c.paymentGpay}
 
-💳 மொத்தம் செலுத்தியது : ₹${c.payment}
+💳 Total Paid : ₹${c.payment}
 
-🧾 புதிய பாக்கி : ₹${c.newBalance}
+🧾 New Balance : ₹${c.newBalance}
 
-📅 தேதி : ${c.date}`;
+📅 ${c.date}`;
 
     if (navigator.share) {
     navigator.share({
-        title: "பரணி புடவை கணக்கு மேலாளர்",
+        title: "Bharani Saree Account Manager",
         text: message
     });
 } else {
-
-navigator.clipboard.writeText(message);
-    alert("வாடிக்கையாளர் விவரங்கள் நகலெடுக்கப்பட்டன. WhatsApp-ல் ஒட்டவும்.");
+    navigator.clipboard.writeText(message);
+    alert("Customer details copied. Paste it in WhatsApp.");
 }
 
 }
