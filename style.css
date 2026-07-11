@@ -1,0 +1,172 @@
+body{
+    margin:0;
+    padding:20px;
+    background:#f2f2f2;
+    font-family:Arial,sans-serif;
+}
+
+.container{
+    max-width:500px;
+    margin:auto;
+    background:#fff;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 0 15px rgba(0,0,0,0.2);
+}
+
+h1{
+    text-align:center;
+    color:#0b5394;
+    margin-bottom:20px;
+}
+
+h2{
+    text-align:center;
+    color:#333;
+    margin-top:20px;
+}
+
+#total{
+    text-align:center;
+    color:red;
+    font-size:28px;
+    margin-top:5px;
+}
+
+input{
+    width:100%;
+    padding:12px;
+    margin:8px 0;
+    border:1px solid #ccc;
+    border-radius:8px;
+    box-sizing:border-box;
+    font-size:16px;
+}
+
+#search{
+    background:#ffffe0;
+    border:2px solid #0b5394;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    margin-top:10px;
+    border:none;
+    border-radius:8px;
+    background:#0b9e43;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#087532;
+}
+
+.customer{
+    background:#fafafa;
+    border-left:6px solid #0b5394;
+    border-radius:10px;
+    padding:15px;
+    margin-top:15px;
+    box-shadow:0 2px 6px rgba(0,0,0,0.1);
+}
+
+.customer b{
+    color:#222;
+}
+
+.actionButtons{
+    display:flex;
+    gap:10px;
+    margin-top:15px;
+}
+
+.editBtn{
+    flex:1;
+    background:#ff9800;
+}
+
+.editBtn:hover{
+    background:#e68900;
+}
+
+.deleteBtn{
+    flex:1;
+    background:#e53935;
+}
+
+.deleteBtn:hover{
+    background:#c62828;
+}
+
+hr{
+    margin:20px 0;
+}
+
+@media(max-width:600px){
+
+.container{
+    padding:15px;
+}
+
+h1{
+    font-size:22px;
+}
+
+button{
+    font-size:15px;
+}
+
+.actionButtons{
+    flex-direction:column;
+}
+
+}
+.shareBtn{
+    flex:1;
+    background:#25D366;
+}
+
+.shareBtn:hover{
+    background:#1da851;
+}
+.popup{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.5);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:999;
+}
+
+.popup-content{
+    width:90%;
+    max-height:80%;
+    overflow:auto;
+    background:white;
+    padding:20px;
+    border-radius:12px;
+}
+
+.historyCard{
+    border:1px solid #ccc;
+    border-radius:10px;
+    padding:10px;
+    margin:10px 0;
+}
+.button-row{
+    display:flex;
+    gap:10px;
+    margin:10px 0;
+}
+
+.button-row button{
+    flex:1;
+}

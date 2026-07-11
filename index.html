@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>பரணி புடவை கணக்கு மேலாளர்</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🧾 பரணி புடவை கணக்கு மேலாளர்</h1>
+
+<!-- Search Box -->
+<input
+type="text"
+id="search"
+placeholder="🔍 வாடிக்கையாளரை தேடுங்கள்..."
+onkeyup="searchCustomer()">
+
+<label>தொடக்க தேதி</label>
+<input type="date" id="fromDate">
+
+<label>முடிவு தேதி</label>
+<input type="date" id="toDate">
+
+<button onclick="filterByDateRange()">
+📅 தேதி மூலம் தேடு
+</button>
+
+<button onclick="showAllCustomers()">
+📋 அனைவரையும் காட்டு
+</button>
+
+<hr>
+
+<!-- Customer Entry -->
+
+<input
+type="text"
+id="name"
+placeholder="வாடிக்கையாளர் பெயர்">
+
+<input
+type="tel"
+id="phone"
+placeholder="வாடிக்கையாளர் தொலைபேசி எண்">
+
+<input
+type="number"
+id="balance"
+placeholder="பழைய பாக்கி தொகை">
+
+<input
+type="number"
+id="purchase"
+placeholder="இந்த மாத வாங்கிய தொகை">
+
+<input
+type="number"
+id="paymentHand"
+placeholder="கையில் செலுத்திய தொகை">
+
+<input
+type="number"
+id="paymentGpay"
+placeholder="GPay மூலம் செலுத்திய தொகை">
+
+<button onclick="addCustomer()">
+➕ வாடிக்கையாளரை சேர்
+</button>
+
+<input
+type="file"
+id="restoreFile"
+accept=".json"
+onchange="restoreData(event)"
+style="display:none;">
+
+<hr>
+
+<h2>இந்த மாத மொத்த வசூல்</h2>
+
+<h3 id="total">₹0</h3>
+
+<button onclick="showMonthlyReport()">
+📊 மாத அறிக்கை
+</button>
+  
+<div class="button-row">
+
+    <button onclick="showVisitedCustomers()">
+        ✅ சந்தித்த வாடிக்கையாளர்கள்
+    </button>
+
+    <button onclick="showPendingCustomers()">
+        📌 சந்திக்க வேண்டியவர்கள்
+    </button>
+
+</div>
+
+<button onclick="resetMonthlyCycle()">
+🔄 புதிய மாதம் தொடங்கு
+</button>
+
+<button onclick="showMonthHistory()">
+📂 மாத வரலாறு
+</button>
+
+<hr>
+
+<h2>வாடிக்கையாளர் பட்டியல்</h2>
+
+<div id="customerList"></div>
+
+</div>
+
+<script src="script.js"></script>
+<!-- Month History Screen -->
+<div id="historyScreen" class="popup" style="display:none;">
+
+    <div class="popup-content">
+
+        <h2>📂 மாத வரலாறு</h2>
+
+        <div id="historyList"></div>
+
+        <br>
+
+        <button onclick="closeHistory()">
+            ❌ மூடு
+        </button>
+
+    </div>
+
+</div>
+</body>
+</html>
