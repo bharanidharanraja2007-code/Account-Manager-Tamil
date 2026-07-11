@@ -805,26 +805,26 @@ function shareMonthHistory(index){
     let m = monthHistory[index];
 
     let msg =
-`📊 ${m.month} REPORT
+`📊 ${m.month} மாத அறிக்கை
 
-👥 Total Customers : ${m.totalCustomers}
+👥 மொத்த வாடிக்கையாளர்கள் : ${m.totalCustomers}
 
-✅ Visited : ${m.visitedCustomers.length}
+✅ வாங்கியவர்கள் : ${m.visitedCustomers.length}
 
-📌 Pending : ${m.pendingCustomers.length}
+📌 நிலுவையில் உள்ளவர்கள் : ${m.pendingCustomers.length}
 
-🛍 Total Purchase : ₹${m.totalPurchase}
+🛍 மொத்த வாங்குதல் : ₹${m.totalPurchase}
 
-💵 Hand Collection : ₹${m.totalHand}
+💵 ரொக்க வசூல் : ₹${m.totalHand}
 
-📱 GPay Collection : ₹${m.totalGPay}
+📱 GPay வசூல் : ₹${m.totalGPay}
 
-💰 Total Collection : ₹${m.totalCollection}
+💰 மொத்த வசூல் : ₹${m.totalCollection}
 
-📒 Total Pending : ₹${m.totalPending}
+📒 மொத்த நிலுவை : ₹${m.totalPending}
 
 ━━━━━━━━━━━━━━━━━━
-✅ VISITED CUSTOMERS
+✅ வாங்கிய வாடிக்கையாளர்கள்
 ━━━━━━━━━━━━━━━━━━
 `;
 
@@ -832,13 +832,13 @@ function shareMonthHistory(index){
 
         msg +=
 `${i+1}. ${c.name}
-📞 ${c.phone}
-💰 Balance : ₹${c.newBalance}
-🛍 Purchase : ₹${c.purchase}
-💵 Hand : ₹${c.paymentHand}
+📞 தொலைபேசி : ${c.phone}
+💰 நிலுவை : ₹${c.newBalance}
+🛍 வாங்குதல் : ₹${c.purchase}
+💵 ரொக்கம் : ₹${c.paymentHand}
 📱 GPay : ₹${c.paymentGpay}
-💳 Paid : ₹${c.payment}
-📅 Last Visit : ${c.lastVisit}
+💳 செலுத்தியது : ₹${c.payment}
+📅 கடைசி வருகை : ${c.lastVisit}
 
 `;
 
@@ -846,7 +846,7 @@ function shareMonthHistory(index){
 
     msg +=
 `━━━━━━━━━━━━━━━━━━
-📌 PENDING CUSTOMERS
+📌 நிலுவையில் உள்ள வாடிக்கையாளர்கள்
 ━━━━━━━━━━━━━━━━━━
 `;
 
@@ -854,13 +854,13 @@ function shareMonthHistory(index){
 
         msg +=
 `${i+1}. ${c.name}
-📞 ${c.phone}
-💰 Balance : ₹${c.newBalance}
-🛍 Purchase : ₹${c.purchase}
-💵 Hand : ₹${c.paymentHand}
+📞 தொலைபேசி : ${c.phone}
+💰 நிலுவை : ₹${c.newBalance}
+🛍 வாங்குதல் : ₹${c.purchase}
+💵 ரொக்கம் : ₹${c.paymentHand}
 📱 GPay : ₹${c.paymentGpay}
-💳 Paid : ₹${c.payment}
-📅 Last Visit : ${c.lastVisit}
+💳 செலுத்தியது : ₹${c.payment}
+📅 கடைசி வருகை : ${c.lastVisit}
 
 `;
 
